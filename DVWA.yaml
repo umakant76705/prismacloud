@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: DVWA
+  namespace: DVWA Area
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: DWVA
+      version: blue
+  template:
+    metadata:
+      name: DVWA
+      labels:
+        app: DVWA
+        version: blue
+    spec:
+      containers:
+      - name: DWVA
+        image: vulnerables/web-dvwa
+        ports:
+        - containerPort: 80
