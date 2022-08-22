@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: DVWA
-  namespace: DVWA Area
+  namespace: DVWA
 spec:
   replicas: 1
   selector:
