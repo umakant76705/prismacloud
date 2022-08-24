@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: flipkart-service
+    name: DVWA-service
     labels: 
-      app: flipkart-pod-service
+      app: DVWA-pod-service
 spec:
   selector:
-    app: flipkart-pod-template
+    app: DVWA-pod-template
   type: NodePort
   ports:
   - nodePort: 31000
-    port: 4444
-    targetPort: 4444
+    port: 80
+    targetPort: 80
