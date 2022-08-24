@@ -3,7 +3,7 @@ kind: Service
 metadata:
     name: dvwa-service
     labels: 
-      app: dvwa-pod-service1
+      app: dvwa-pod-service
 spec:
   selector:
     app: dvwa-pod-template
