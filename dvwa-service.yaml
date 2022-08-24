@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: DVWA-service
+    name: dvwa-service
     labels: 
-      app: DVWA-pod-service
+      app: dvwa-pod-service
 spec:
   selector:
-    app: DVWA-pod-template
+    app: dvwa-pod-template
   type: NodePort
   ports:
   - nodePort: 31000
