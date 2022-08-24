@@ -1,0 +1,21 @@
+#svc-clusterip.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dvwa-pod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: svc-example
+  template:
+    metadata:
+      labels:
+        app: svc-example
+    spec:   
+      containers:
+      - name: dvwa-demo
+        image: vulnerables/web-dvwa
+        ports:
+        - containerPort: 4444 
