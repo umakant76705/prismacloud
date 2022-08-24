@@ -9,6 +9,6 @@ spec:
     app: flipkart-pod-template
   type: NodePort
   ports:
-  - nodePort: 8080
+  - nodePort: 31000
     port: 4444
     targetPort: 4444
