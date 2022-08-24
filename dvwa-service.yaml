@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: flipkart-service
+    labels: 
+      app: flipkart-pod-service
+spec:
+  selector:
+    app: flipkart-pod-template
+  type: NodePort
+  ports:
+  - nodePort: 8080
+    port: 4444
+    targetPort: 4444
